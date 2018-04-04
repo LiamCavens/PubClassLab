@@ -1,11 +1,19 @@
 class Pub
 
-    attr_reader :name
+    attr_reader :name, :drinks
     attr_accessor :till
 
-    def initialize(name, till)
+    def initialize(name, till, drink)
         @name = name
         @till = till
-        @drinks = []
+        @drink = drink
+    end
+
+    def drink_count()
+        return @drink.count()
+    end
+
+    def give_drink()
+       return @drink.shift()
     end
 end
