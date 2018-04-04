@@ -7,6 +7,7 @@ class Customer
         @name = name
         @wallet = wallet
         @drinkincustomer = []
+        @age = age
     end
 
     def get_loan()
@@ -17,8 +18,7 @@ class Customer
         return @drinkincustomer.count()
     end
 
-    def take_drink(pub)
-        drink = pub.give_drink()
+    def take_drink(drink)
         @drinkincustomer.push(drink)
     end
 

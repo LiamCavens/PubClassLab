@@ -38,4 +38,5 @@ class CustomerTest < MiniTest::Test
     def test_paying_for_drink__deduct_from_wallet()
         assert_equal(49, @customer.pay_for_drink(@drink1))
     end
+
 end
