@@ -10,9 +10,9 @@ class CustomerTest < MiniTest::Test
         
         @customer = Customer.new("Donald", 50, 71)
         @customer2 = Customer.new("Oor Wullie", 5, 11)
-        @drink1 = Drink.new("Lager", 1.00)
-        @drink2 = Drink.new("Wine", 5.00)
-        @drink3 = Drink.new("Gin", 3.00)
+        @drink1 = Drink.new("Lager", 1.00, 10)
+        @drink2 = Drink.new("Wine", 5.00, 30)
+        @drink3 = Drink.new("Gin", 3.00, 15)
         drinks = [@drink1, @drink2, @drink3]
         @pub = Pub.new("Fanny by Gaslight", 100, drinks)
 
