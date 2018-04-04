@@ -26,10 +26,6 @@ class PubTest < MiniTest::Test
         assert_equal(100, @pub.till)
     end
 
-    # def test_pub_has_no_drinks()
-    #     assert_equal(0, @pub.drink_count())
-    # end
-
     def test_pub_opens_with_3_drinks()
         assert_equal(3, @pub.drink_count())
     end
@@ -44,8 +40,14 @@ class PubTest < MiniTest::Test
     end
 
     def test_customer_underage()
-        assert_equal("Under Legal Drinking Age", @pub.give_drink(@customer2))
+        assert_equal("No Service", @pub.give_drink(@customer2))
     end
 
+    def test_deny_customer_too_drunk() 
+        @customer1.take_drink(@drink2)
+        @customer1.take_drink(@drink2)
+        @customer1.take_drink(@drink2)  
+        assert_equal("No Service", @pub.give_drink(@customer1))
+    end
     
 end

@@ -29,11 +29,11 @@ class Customer
         end
     end
 
-    def get_drunkenness_level(drink)
-        for drinks in @drinkincustomer do
-            return drink.alcohol_level    
+    def get_drunkenness_level()
+        for drink in @drinkincustomer do
+              @drunkenness += drink.alcohol_level    
         end
-
+            return @drunkenness
     end
 end
 

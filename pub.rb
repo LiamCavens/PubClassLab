@@ -14,10 +14,10 @@ class Pub
     end
 
     def give_drink(customer)
-        if customer.age >= 18 #&& customer.drunkenness
+        if customer.age >= 18 && customer.get_drunkenness_level <= 75
             customer.take_drink(@drink.shift())
         else
-            return "Under Legal Drinking Age"
+            return "No Service"
         end
     end
 
