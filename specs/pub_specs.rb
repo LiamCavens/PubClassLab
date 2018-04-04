@@ -16,4 +16,8 @@ class PubTest < MiniTest::Test
         assert_equal("Fanny by Gaslight", @pub.name)
     end
 
+    def test_get_till_amount
+        assert_equal(100, @pub.till)
+    end
+
 end
