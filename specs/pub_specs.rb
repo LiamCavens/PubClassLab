@@ -12,11 +12,11 @@ class PubTest < MiniTest::Test
     
     end
 
-    def test_get_pub_name
+    def test_get_pub_name()
         assert_equal("Fanny by Gaslight", @pub.name)
     end
 
-    def test_get_till_amount
+    def test_get_till_amount()
         assert_equal(100, @pub.till)
     end
 
