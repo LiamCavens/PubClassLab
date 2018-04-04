@@ -28,6 +28,13 @@ class Customer
             return @wallet -= drink.price
         end
     end
+
+    def get_drunkenness_level(drink)
+        for drinks in @drinkincustomer do
+            return drink.alcohol_level    
+        end
+
+    end
 end
 
   

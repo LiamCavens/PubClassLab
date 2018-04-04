@@ -39,4 +39,8 @@ class CustomerTest < MiniTest::Test
         assert_equal(49, @customer.pay_for_drink(@drink1))
     end
 
+    def test_get_customer_drunkenness_level()
+        @customer.take_drink(@drink1)
+        assert_equal(10, @customer.get_drunkenness_level(@drink1))
+    end
 end

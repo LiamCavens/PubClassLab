@@ -47,7 +47,5 @@ class PubTest < MiniTest::Test
         assert_equal("Under Legal Drinking Age", @pub.give_drink(@customer2))
     end
 
-    # def test_customer_old_enough_to_drink()
-    #     assert_equal(71, @pub.customer_old_enough_to_drink(@customer1))
-    # end
+    
 end

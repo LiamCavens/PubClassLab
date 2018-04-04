@@ -14,7 +14,7 @@ class Pub
     end
 
     def give_drink(customer)
-        if customer.age >= 18
+        if customer.age >= 18 #&& customer.drunkenness
             customer.take_drink(@drink.shift())
         else
             return "Under Legal Drinking Age"
@@ -25,11 +25,4 @@ class Pub
         return @till += drink.price
     end
 
-    # def customer_old_enough_to_drink(customer)
-    #     if customer.age >= 18
-    #         give_drink()
-    #     else
-    #         return "Under Legal Drinking Age"
-    #     end
-    # end
 end
