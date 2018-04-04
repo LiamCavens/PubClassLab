@@ -16,4 +16,8 @@ class Pub
     def give_drink()
        return @drink.shift()
     end
+
+    def add_to_till(drink)
+        return @till += drink.price
+    end
 end

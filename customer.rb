@@ -1,9 +1,9 @@
 class Customer
 
-    attr_reader :name
+    attr_reader :name, :age
     attr_accessor :wallet
 
-    def initialize(name, wallet)
+    def initialize(name, wallet, age)
         @name = name
         @wallet = wallet
         @drinkincustomer = []
@@ -22,12 +22,12 @@ class Customer
         @drinkincustomer.push(drink)
     end
 
-    def get_price_of_drink()
-        return @drink.price
+    def pay_for_drink(drink)
+        if drink.price <= @wallet
+            return @wallet -= drink.price
+        end
     end
 end
 
-  # def give_money_for_lager()
-    #     return @wallet -= 
-    # end
+  
 
